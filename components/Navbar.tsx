@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+const base = import.meta.env.BASE_URL;
+
 interface NavbarProps {
   setView: (view: 'landing' | 'privacy') => void;
 }
@@ -13,9 +15,11 @@ export const Navbar: React.FC<NavbarProps> = ({ setView }) => {
           className="flex items-center space-x-3 cursor-pointer"
           onClick={() => setView('landing')}
         >
-          <div className="w-10 h-10 bg-[#886EF0] rounded-xl flex items-center justify-center shadow-lg shadow-[#886EF0]/20">
-            <span className="text-white font-bold text-xl">B</span>
-          </div>
+          <img
+            src={`${base}app_icon.jpg`}
+            alt="Better off"
+            className="w-10 h-10 rounded-xl shadow-lg"
+          />
           <div>
             <span className="text-xl font-bold tracking-tight">Better off</span>
             <p className="text-xs text-white/40">A safe space for recovery and healing. Made with 💜 by Liti Labs.</p>
