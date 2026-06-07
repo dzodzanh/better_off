@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface NavbarProps {
-  setView: (view: 'landing' | 'privacy') => void;
+  setView: (view: 'landing' | 'privacy' | 'terms') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ setView }) => {

@@ -2,7 +2,7 @@
 import React from 'react';
 
 interface FooterProps {
-  setView: (view: 'landing' | 'privacy') => void;
+  setView: (view: 'landing' | 'privacy' | 'terms') => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ setView }) => {
@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ setView }) => {
           <button onClick={() => setView('landing')} className="hover:text-white transition-colors">Home</button>
           <a href="mailto:litilabs@outlook.com" className="hover:text-white transition-colors">Support</a>
           <button onClick={() => setView('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
-          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms of Use</a>
+          <button onClick={() => setView('terms')} className="hover:text-white transition-colors">Terms of Use</button>
         </div>
 
         <div className="flex space-x-4">
